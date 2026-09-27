@@ -1,91 +1,37 @@
-/* ========================================
-   Lzhua's Blog - Custom CSS
-   ======================================== */
-
-
-/* ========================================
-   颜色变量
-   ======================================== */
+/* Lzhua's Blog - Custom CSS */
 
 :root {
-  /* 卡片 / 导航背景 */
   --panel-bg: rgba(30, 30, 30, 0.93);
-
-  /* 文字层级：正文 < 小标题 < 大标题 */
   --text: #c0c0c0;
   --text-light: #d2d2d2;
   --text-title: #d9d9d9;
-
-  /* 辅助文字 */
   --text-muted: #a8a8a8;
-
-  /* 链接 */
   --link: #8fc7ff;
 }
 
-/* ========================================
-   背景
-   ======================================== */
 
-/* 网站背景取消淡入动画 */
-/* ========================================
-   背景淡入
-   ======================================== */
+/* 背景 */
 
 #web_bg {
   animation: none !important;
 }
 
-/* 页面加载时先加一层淡黑滤镜 */
-#web_bg::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  pointer-events: none;
 
-  animation: bg-mask-fade 1.8s ease-out forwards;
-}
+/* 卡片 */
 
-/* 淡黑滤镜逐渐消失 */
-@keyframes bg-mask-fade {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
-/* ========================================
-   卡片背景
-   ======================================== */
-
-/* 首页文章 */
 #recent-posts .recent-post-item,
 #recent-posts .recent-post-info,
-
-/* 文章页面 */
 #post,
-
-/* 普通页面 */
 #page,
-
-/* 分类 / 归档 / 标签页面 */
 #archive,
 #category,
 #tag,
-
-/* 右侧栏 */
 #aside-content .card-widget {
   background: var(--panel-bg) !important;
 }
 
 
-/* ========================================
-   顶部导航
-   ======================================== */
+/* 顶部导航 */
 
 #nav {
   background: var(--panel-bg) !important;
@@ -103,24 +49,20 @@
 }
 
 
-/* ========================================
-   首页文章
-   ======================================== */
+/* 首页 */
 
-/* 文章标题 */
 #recent-posts .article-title {
   color: var(--text-title) !important;
   font-size: 1.2rem;
 }
 
-/* 文章摘要 */
 #recent-posts .content {
   color: var(--text) !important;
   font-size: 16px;
 }
 
-/* 日期 / 分类等信息 */
-#recent-posts .article-meta-wrap {
+#recent-posts .article-meta-wrap,
+#recent-posts .article-meta-wrap time {
   color: var(--text-muted) !important;
 }
 
@@ -129,16 +71,17 @@
 }
 
 
-/* ========================================
-   文章正文
-   ======================================== */
+/* 文章页 */
+
+#post .post-title {
+  color: var(--text-title) !important;
+}
 
 #post .post-content {
   color: var(--text) !important;
   font-size: 16px;
 }
 
-/* 普通文字 */
 #post .post-content p,
 #post .post-content li,
 #post .post-content ul,
@@ -149,7 +92,6 @@
   color: var(--text) !important;
 }
 
-/* 各级标题 */
 #post .post-content h1,
 #post .post-content h2,
 #post .post-content h3,
@@ -159,187 +101,168 @@
   color: var(--text-light) !important;
 }
 
-/* 加粗文字 */
 #post .post-content strong,
 #post .post-content b {
   color: var(--text-light) !important;
 }
 
-/* 引用 */
 #post .post-content blockquote {
   color: var(--text) !important;
 }
 
-/* 表格 */
 #post .post-content table,
 #post .post-content th,
 #post .post-content td {
   color: var(--text) !important;
 }
 
-/* 文章链接 */
 #post .post-content a {
   color: var(--link) !important;
 }
 
-/* 代码块保留 Butterfly 自己的配色 */
-#post .post-content pre,
-#post .post-content pre *,
-#post .post-content code {
-  color: inherit;
-}
 
-/* 文章主标题 */
-#post .post-title {
-  color: var(--text-title) !important;
-}
+/* 普通页面 / About */
 
-
-/* ========================================
-   普通页面
-   ======================================== */
-
-/* 页面正文 */
-#page .page-content {
-  color: var(--text) !important;
-  font-size: 16px;
-}
-
-#page .page-content p,
-#page .page-content li {
-  color: var(--text) !important;
-}
-
-/* 页面标题 */
 #page .page-title {
   color: var(--text-title) !important;
 }
 
+#page #article-container {
+  color: var(--text) !important;
+  font-size: 16px;
+}
 
-/* ========================================
-   分类页
-   ======================================== */
-
-/* 分类页主体 */
-#category,
-#category .article-sort {
+#page #article-container p,
+#page #article-container li,
+#page #article-container ul,
+#page #article-container ol,
+#page #article-container dl,
+#page #article-container dt,
+#page #article-container dd {
   color: var(--text) !important;
 }
 
-/* 分类标题 */
-#category .article-sort-title {
+#page #article-container h1,
+#page #article-container h2,
+#page #article-container h3,
+#page #article-container h4,
+#page #article-container h5,
+#page #article-container h6 {
+  color: var(--text-light) !important;
+}
+
+#page #article-container strong,
+#page #article-container b {
+  color: var(--text-light) !important;
+}
+
+#page #article-container a {
+  color: var(--link) !important;
+}
+
+
+/* 分类 / 标签总页 */
+
+#page .category-lists,
+#page .tag-cloud {
+  color: var(--text) !important;
+}
+
+#page .category-lists *,
+#page .tag-cloud * {
+  color: var(--text-light) !important;
+}
+
+#page .category-lists a:hover,
+#page .tag-cloud a:hover {
   color: var(--text-title) !important;
 }
 
-/* 分类年份 */
-#category .article-sort-item.year {
-  color: var(--text-light) !important;
-}
 
-/* 分类日期 */
-#category .article-sort-item-time,
-#category .article-sort-item-time time {
-  color: var(--text-muted) !important;
-}
+/* 归档 / 分类 / 标签子页 */
 
-/* 分类文章标题 */
-#category .article-sort-item-title {
-  color: var(--text-light) !important;
-}
-
-/* 分类页其他链接 */
-#category .article-sort a {
-  color: var(--text-light) !important;
-}
-
-#category .article-sort-item-title:hover {
-  color: var(--text-title) !important;
-}
-
-
-/* ========================================
-   归档页
-   ======================================== */
-
-/* 归档页主体 */
 #archive,
-#archive .article-sort {
+#category,
+#tag {
   color: var(--text) !important;
 }
 
-/* 归档标题 */
-#archive .article-sort-title {
+#archive .article-sort,
+#category .article-sort,
+#tag .article-sort {
+  color: var(--text) !important;
+}
+
+#archive .article-sort-title,
+#category .article-sort-title,
+#tag .article-sort-title,
+#archive .article-sort-title *,
+#category .article-sort-title *,
+#tag .article-sort-title * {
   color: var(--text-title) !important;
 }
 
-/* 归档年份 */
-#archive .article-sort-item.year {
+#archive .article-sort-item.year,
+#category .article-sort-item.year,
+#tag .article-sort-item.year {
   color: var(--text-light) !important;
 }
 
-/* 归档日期 */
 #archive .article-sort-item-time,
-#archive .article-sort-item-time time {
+#category .article-sort-item-time,
+#tag .article-sort-item-time,
+#archive .article-sort-item-time *,
+#category .article-sort-item-time *,
+#tag .article-sort-item-time * {
   color: var(--text-muted) !important;
 }
 
-/* 归档文章标题 */
-#archive .article-sort-item-title {
+#archive .article-sort-item-title,
+#category .article-sort-item-title,
+#tag .article-sort-item-title,
+#archive .article-sort-item-title *,
+#category .article-sort-item-title *,
+#tag .article-sort-item-title * {
   color: var(--text-light) !important;
 }
 
-/* 归档页其他链接 */
-#archive .article-sort a {
+#archive .article-sort a,
+#category .article-sort a,
+#tag .article-sort a {
   color: var(--text-light) !important;
 }
 
-#archive .article-sort-item-title:hover {
+#archive .article-sort a:hover,
+#category .article-sort a:hover,
+#tag .article-sort a:hover {
   color: var(--text-title) !important;
 }
 
 
-/* ========================================
-   标签页
-   ======================================== */
+/* 侧栏作者 */
 
-#tag .tag-cloud a {
-  color: var(--text-light) !important;
-}
-
-
-/* ========================================
-   右侧作者信息
-   ======================================== */
-
-/* 作者名字 */
 #aside-content .author-info-name {
   color: var(--text-title) !important;
 }
 
-/* 作者描述 */
 #aside-content .author-info-description {
   color: var(--text-light) !important;
 }
 
-/* 文章 / 标签 / 分类数量 */
 #aside-content .site-data .headline,
 #aside-content .site-data .length-num {
   color: var(--text-light) !important;
 }
 
 
-/* ========================================
-   右侧卡片标题
-   ======================================== */
+/* 侧栏标题 */
 
 #aside-content .item-headline {
   color: var(--text-light) !important;
 }
 
 
-/* ========================================
-   最新文章
-   ======================================== */
+/* 侧栏最新文章 */
 
 #aside-content .card-recent-post .title {
   color: var(--text-light) !important;
@@ -350,9 +273,7 @@
 }
 
 
-/* ========================================
-   目录
-   ======================================== */
+/* 侧栏目录 */
 
 #aside-content .toc a {
   color: var(--text-light) !important;
@@ -363,9 +284,7 @@
 }
 
 
-/* ========================================
-   侧栏分类
-   ======================================== */
+/* 侧栏分类 */
 
 #aside-content .card-category-list-link,
 #aside-content .card-category-list-name,
@@ -374,18 +293,14 @@
 }
 
 
-/* ========================================
-   侧栏标签
-   ======================================== */
+/* 侧栏标签 */
 
 #aside-content .card-tag-cloud a {
   color: var(--text-light) !important;
 }
 
 
-/* ========================================
-   侧栏归档
-   ======================================== */
+/* 侧栏归档 */
 
 #aside-content .card-archive-list-link,
 #aside-content .card-archive-list-date,
@@ -394,9 +309,7 @@
 }
 
 
-/* ========================================
-   网站信息
-   ======================================== */
+/* 网站信息 */
 
 #aside-content .webinfo-item,
 #aside-content .webinfo-item .item-name,
@@ -405,9 +318,7 @@
 }
 
 
-/* ========================================
-   公告
-   ======================================== */
+/* 公告 */
 
 #aside-content .card-announcement .item-headline,
 #aside-content .card-announcement .announcement_content {
@@ -415,9 +326,7 @@
 }
 
 
-/* ========================================
-   文章版权声明
-   ======================================== */
+/* 文章版权 */
 
 #post .post-copyright,
 #post .post-copyright-info {
@@ -425,20 +334,16 @@
 }
 
 
-/* ========================================
-   页脚
-   ======================================== */
+/* 页脚 */
 
-/* 页脚全部使用纯白 */
 #footer,
 #footer .footer-copyright,
 #footer .copyright,
 #footer .framework-info,
 #footer .framework-info a {
-  color: #ffffff !important;
+  color: #fff !important;
 }
 
-/* 页脚链接悬停 */
 #footer a:hover {
   color: var(--text-title) !important;
 }
