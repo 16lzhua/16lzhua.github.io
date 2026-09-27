@@ -1,0 +1,297 @@
+/* ========================================
+   Lzhua's Blog - Custom CSS
+   ======================================== */
+
+
+/* ========================================
+   颜色变量
+   ======================================== */
+
+:root {
+  /* 卡片 / 导航背景 */
+  --panel-bg: rgba(30, 30, 30, 0.93);
+
+  /* 文字层级 */
+  --text: #c0c0c0;
+  --text-light: #d2d2d2;
+  --text-title: #d9d9d9;
+
+  /* 辅助文字 */
+  --text-muted: #a8a8a8;
+
+  /* 链接 */
+  --link: #8fc7ff;
+}
+
+
+/* ========================================
+   背景
+   ======================================== */
+
+/* 网站背景图取消淡入动画 */
+#web_bg {
+  animation: none !important;
+}
+
+
+/* ========================================
+   卡片
+   ======================================== */
+
+/* 首页文章 */
+#recent-posts .recent-post-item,
+#recent-posts .recent-post-info,
+
+/* 文章 / 页面 */
+#post,
+#page,
+#archive,
+#category,
+#tag,
+
+/* 右侧卡片 */
+#aside-content .card-widget {
+  background: var(--panel-bg) !important;
+}
+
+
+/* ========================================
+   顶部导航
+   ======================================== */
+
+#nav {
+  background: var(--panel-bg) !important;
+}
+
+#nav a,
+#nav .site-page,
+#nav .site-name {
+  color: var(--text-light) !important;
+}
+
+#nav a:hover,
+#nav .site-page:hover {
+  color: var(--text-title) !important;
+}
+
+
+/* ========================================
+   首页文章
+   ======================================== */
+
+/* 文章标题 */
+#recent-posts .article-title {
+  color: var(--text-title) !important;
+  font-size: 1.2rem;
+}
+
+/* 文章摘要 */
+#recent-posts .content {
+  color: var(--text) !important;
+  font-size: 16px;
+}
+
+/* 日期 / 分类等信息 */
+#recent-posts .article-meta-wrap {
+  color: var(--text-muted) !important;
+}
+
+#recent-posts .article-meta-wrap a {
+  color: var(--text-light) !important;
+}
+
+
+/* ========================================
+   文章正文
+   ======================================== */
+
+/* 正文 */
+#post .post-content {
+  color: var(--text) !important;
+  font-size: 16px;
+}
+
+/* 段落 / 列表 */
+#post .post-content p,
+#post .post-content li {
+  color: var(--text) !important;
+}
+
+/* 文章主标题 */
+#post .post-title {
+  color: var(--text-title) !important;
+}
+
+/* 文章小标题 */
+#post .post-content h1,
+#post .post-content h2,
+#post .post-content h3,
+#post .post-content h4,
+#post .post-content h5,
+#post .post-content h6 {
+  color: var(--text-light) !important;
+}
+
+/* 文章链接 */
+#post .post-content a {
+  color: var(--link) !important;
+}
+
+
+/* ========================================
+   普通页面
+   ======================================== */
+
+/* 页面正文 */
+#page .page-content {
+  color: var(--text) !important;
+  font-size: 16px;
+}
+
+/* 页面标题 */
+#page .page-title {
+  color: var(--text-title) !important;
+}
+
+/* 页面段落 / 列表 */
+#page .page-content p,
+#page .page-content li {
+  color: var(--text) !important;
+}
+
+
+/* ========================================
+   右侧作者信息
+   ======================================== */
+
+/* 作者名字 */
+#aside-content .author-info-name {
+  color: var(--text-title) !important;
+}
+
+/* 作者描述 */
+#aside-content .author-info-description {
+  color: var(--text-light) !important;
+}
+
+/* 文章 / 标签 / 分类统计 */
+#aside-content .site-data .headline,
+#aside-content .site-data .length-num {
+  color: var(--text-light) !important;
+}
+
+
+/* ========================================
+   右侧卡片标题
+   ======================================== */
+
+#aside-content .item-headline {
+  color: var(--text-light) !important;
+}
+
+
+/* ========================================
+   最新文章
+   ======================================== */
+
+#aside-content .card-recent-post .title {
+  color: var(--text-light) !important;
+}
+
+#aside-content .card-recent-post time {
+  color: var(--text-muted) !important;
+}
+
+
+/* ========================================
+   目录
+   ======================================== */
+
+#aside-content .toc a {
+  color: var(--text-light) !important;
+}
+
+#aside-content .toc .active {
+  color: var(--text-title) !important;
+}
+
+
+/* ========================================
+   分类
+   ======================================== */
+
+#aside-content .card-category-list-link,
+#aside-content .card-category-list-name,
+#aside-content .card-category-list-count {
+  color: var(--text-light) !important;
+}
+
+
+/* ========================================
+   标签
+   ======================================== */
+
+#aside-content .card-tag-cloud a {
+  color: var(--text-light) !important;
+}
+
+
+/* ========================================
+   归档
+   ======================================== */
+
+#aside-content .card-archive-list-link,
+#aside-content .card-archive-list-date,
+#aside-content .card-archive-list-count {
+  color: var(--text-light) !important;
+}
+
+
+/* ========================================
+   网站信息
+   ======================================== */
+
+#aside-content .webinfo-item,
+#aside-content .webinfo-item .item-name,
+#aside-content .webinfo-item .item-count {
+  color: var(--text-light) !important;
+}
+
+
+/* ========================================
+   公告
+   ======================================== */
+
+#aside-content .card-announcement .item-headline,
+#aside-content .card-announcement .announcement_content {
+  color: var(--text-light) !important;
+}
+
+
+/* ========================================
+   文章版权声明
+   ======================================== */
+
+#post .post-copyright,
+#post .post-copyright-info {
+  color: var(--text) !important;
+}
+
+
+/* ========================================
+   页脚
+   ======================================== */
+
+/* 页脚全部使用纯白 */
+#footer,
+#footer .footer-copyright,
+#footer .copyright,
+#footer .framework-info,
+#footer .framework-info a {
+  color: #ffffff !important;
+}
+
+/* 页脚链接悬停 */
+#footer a:hover {
+  color: var(--text-title) !important;
+}
